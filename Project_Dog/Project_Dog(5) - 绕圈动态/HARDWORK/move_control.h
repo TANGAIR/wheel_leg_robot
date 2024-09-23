@@ -1,0 +1,113 @@
+#ifndef MOVE_CONTROL_H
+#define MOVE_CONTROL_H
+#include "sys.h"
+
+
+/**********************************************************结构体定义*******************************************************/
+typedef struct
+{
+  char   Leg_Type;          //腿的类型
+	
+	char  Leg_Mode;           //腿的模式，1轨迹，0静退
+
+	float  Leg_X;             //目标X，足端在关节坐标系X的坐标,单位CM，以关节舵机轴心为原点，机器狗前进方向为X轴正方向
+	float  Leg_Y;             //目标Y，足端在关节坐标系Y的坐标,单位CM，以关节舵机轴心为原点，向下为Y轴正方向
+	
+  
+  float real_x;             //通过关节角度解算出的真实足端坐标
+  float real_y; 						//通过关节角度解算出的真实足端坐标
+
+	float Steerint_IN ;
+	float Steerint_OUT ;
+	
+	float  step_forward_time; //迈步周期计时
+	float  quiesecence_time;  //静退周期计时
+
+
+	float  Y_Add;                    //Y轴自适应补偿
+	
+	float FOOT_x;                   //修正摆线初始X坐标
+	float FOOT_y;                   //修正摆线初始Y坐标
+		
+}Leg_Data_Typedef;
+
+
+/*******************************************************宏定义*******************************************************/
+//腿的类型
+#define LEFT_FRONT_LEG  11
+#define LEFT_BACK_LEG   22
+#define RIGHT_BACK_LEG  33
+#define RIGHT_FRONT_LEG 44
+//轨迹
+#define QUIESECENCE  (1) //静止退后
+#define STEP_FORWARD  (2) //迈步前进
+//方向
+#define DIRECTION_FORWARD  (2) //前进
+#define DIRECTION_BACK  (1)   //后退
+//收缩步态
+#define SHRINK (0)
+//圆周律
+#define pi 3.14159
+
+//轨迹计算参数
+//腿杆长(MM)
+#define CLUB_LENGTH 120     //90  75
+#define GIG_LENGTH_1 90     //90  75
+#define SMALL_LENGTH_2 75     //90  75
+//修正摆线起始X坐标（mm），足端初始X坐标
+#define FOOT_X (-30)
+//足端静退直线Y坐标（mm），足端初始Y坐标
+#define FOOT_Y 120
+
+//修正摆线步长（mm）
+#define STEP_LENTH 60
+//修正摆线步高（mm）
+#define STEP_HIGHT 30
+
+//迈步用时10ms
+#define STEP_FORWARD_TIME 30
+//静退用时10ms
+#define QUIESECENCE_TIME  20
+
+//轮电机速度定义
+#define WHEEL_STOP  1000
+
+//转向X
+
+
+
+
+
+
+/************************************************函数声明***********************************************************/
+
+void Gait_Control(char gait);
+void Foot_Direction_Init(void);
+void Shrink(void);
+void Slide(void);
+void Move_Control_Task(void *pvParameters);
+//坐标反解
+void Coordinate_Inverse(Leg_Data_Typedef* Leg_Data);
+//舵机输出
+void Steering_PWM_Out(Leg_Data_Typedef* Leg_Data);
+//坐标控制
+void Leg_Diretion_Control(Leg_Data_Typedef* Leg_Data,double foot_x,double foot_y);
+//足端轨迹控制
+void Foot_Control(Leg_Data_Typedef* Leg_Data,char trail);
+//四足步态控制
+
+/***********************************************数据定义域拓展********************************************************/
+//腿数据结构体
+extern  Leg_Data_Typedef Left_Front_Leg_Struct;
+extern  Leg_Data_Typedef Left_Back_Leg_Struct;
+extern  Leg_Data_Typedef Right_Back_Leg_Struct;
+extern  Leg_Data_Typedef Right_Front_Leg_Struct;
+
+
+
+
+
+
+
+
+#endif 

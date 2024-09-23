@@ -1,0 +1,99 @@
+T3374 006:225.358   SEGGER J-Link V7.22b Log File
+T3374 006:225.405   DLL Compiled: Jun 17 2021 17:22:49
+T3374 006:225.414   Logging started @ 2024-03-10 13:38
+T3374 006:225.421 - 33.880ms
+T3374 006:225.432 JLINK_SetWarnOutHandler(...)
+T3374 006:225.439 - 0.010ms
+T3374 006:225.448 JLINK_OpenEx(...)
+T3374 006:226.804   Firmware: J-Link V9 compiled May  7 2021 16:26:12
+T3374 006:227.163   Firmware: J-Link V9 compiled May  7 2021 16:26:12
+T3374 006:227.319   Decompressing FW timestamp took 133 us
+T3374 006:234.056   Hardware: V9.70
+T3374 006:234.079   S/N: 150711118
+T3374 006:234.091   OEM: SEGGER
+T3374 006:234.101   Feature(s): GDB, RDI, FlashBP, FlashDL, JFlash
+T3374 006:235.422   TELNET listener socket opened on port 19021
+T3374 006:239.678   WEBSRV Starting webserver
+T3374 006:240.107   WEBSRV Webserver running on local port 19080
+T3374 006:240.120 - 14.676ms returns "O.K."
+T3374 006:240.137 JLINK_GetEmuCaps()
+T3374 006:240.145 - 0.011ms returns 0xB9FF7BBF
+T3374 006:240.156 JLINK_TIF_GetAvailable(...)
+T3374 006:240.324 - 0.176ms
+T3374 006:240.342 JLINK_SetErrorOutHandler(...)
+T3374 006:240.350 - 0.011ms
+T3374 006:240.368 JLINK_ExecCommand("ProjectFile = "D:\PROJECT\Wheel-leg robot\BIG_DOG\F407µç»ú¿ØÖÆ£¨12£©-\USER\JLinkSettings.ini"", ...). 
+T3374 006:242.352 - 1.993ms returns 0x00
+T3374 006:242.726 JLINK_ExecCommand("Device = STM32F407ZGTx", ...). 
+T3374 006:243.392   Device "STM32F407ZG" selected.
+T3374 006:243.848 - 1.115ms returns 0x00
+T3374 006:243.870 JLINK_GetHardwareVersion()
+T3374 006:243.879 - 0.011ms returns 97000
+T3374 006:243.888 JLINK_GetDLLVersion()
+T3374 006:243.895 - 0.010ms returns 72202
+T3374 006:243.904 JLINK_GetOEMString(...)
+T3374 006:243.913 JLINK_GetFirmwareString(...)
+T3374 006:243.921 - 0.010ms
+T3374 006:243.932 JLINK_GetDLLVersion()
+T3374 006:243.939 - 0.010ms returns 72202
+T3374 006:243.948 JLINK_GetCompileDateTime()
+T3374 006:243.955 - 0.010ms
+T3374 006:243.965 JLINK_GetFirmwareString(...)
+T3374 006:243.972 - 0.010ms
+T3374 006:243.981 JLINK_GetHardwareVersion()
+T3374 006:243.988 - 0.010ms returns 97000
+T3374 006:243.998 JLINK_GetSN()
+T3374 006:244.005 - 0.010ms returns 150711118
+T3374 006:244.015 JLINK_GetOEMString(...)
+T3374 006:244.026 JLINK_TIF_Select(JLINKARM_TIF_SWD)
+T3374 006:244.672 - 0.654ms returns 0x00
+T3374 006:244.689 JLINK_HasError()
+T3374 006:244.700 JLINK_SetSpeed(5)
+T3374 006:244.847 - 0.155ms
+T3374 006:245.080 JLINK_HasError()
+T3374 006:245.093 JLINK_SetResetType(JLINKARM_RESET_TYPE_NORMAL)
+T3374 006:245.101 - 0.011ms returns JLINKARM_RESET_TYPE_NORMAL
+T3374 006:245.110 JLINK_Reset()
+T3374 006:245.340   InitTarget() start
+T3374 006:245.356    J-Link Script File: Executing InitTarget()
+T3374 007:020.464   Can not attach to CPU. Trying connect under reset.
+T3374 007:846.423   Connecting to CPU via connect under reset failed.
+T3374 007:896.866   InitTarget() end
+T3374 008:001.692   InitTarget() start
+T3374 008:001.716    J-Link Script File: Executing InitTarget()
+T3374 008:777.490   Can not attach to CPU. Trying connect under reset.
+T3374 009:603.358   Connecting to CPU via connect under reset failed.
+T3374 009:654.108   InitTarget() end
+T3374 009:654.205 - 3409.098ms
+T3374 009:654.221 JLINK_GetId()
+T3374 009:654.433   InitTarget() start
+T3374 009:654.448    J-Link Script File: Executing InitTarget()
+T3374 010:429.119   Can not attach to CPU. Trying connect under reset.
+T3374 011:255.080   Connecting to CPU via connect under reset failed.
+T3374 011:305.829   InitTarget() end
+T3374 011:410.248   InitTarget() start
+T3374 011:410.274    J-Link Script File: Executing InitTarget()
+T3374 012:185.997   Can not attach to CPU. Trying connect under reset.
+T3374 013:012.074   Connecting to CPU via connect under reset failed.
+T3374 013:062.774   InitTarget() end
+T3374 013:062.800 - 3408.583ms returns 0x00000000
+T3374 013:062.817 JLINK_GetId()
+T3374 013:063.039   InitTarget() start
+T3374 013:063.054    J-Link Script File: Executing InitTarget()
+T3374 013:837.865   Can not attach to CPU. Trying connect under reset.
+T3374 014:663.953   Connecting to CPU via connect under reset failed.
+T3374 014:715.013   InitTarget() end
+T3374 014:819.564   InitTarget() start
+T3374 014:819.614    J-Link Script File: Executing InitTarget()
+T3374 015:594.725   Can not attach to CPU. Trying connect under reset.
+T3374 016:421.032   Connecting to CPU via connect under reset failed.
+T3374 016:472.333   InitTarget() end
+T3374 016:472.411 - 3409.598ms returns 0x00000000
+T3374 016:473.468 JLINK_GetFirmwareString(...)
+T3374 016:473.481 - 0.016ms
+T49EC 040:978.008   
+  ***** Error: Connection to emulator lost!
+T3374 081:781.011 JLINK_Close()
+T3374 081:819.340 - 38.349ms
+T3374 081:819.365   
+T3374 081:819.372   Closed
