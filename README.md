@@ -1,7 +1,7 @@
 # wheel_leg_robot
 
 # 简介
-   本项目为一种单腿三自由度的轮腿复合机器人控制代码。
+   本项目为一种单腿三自由度的轮腿复合机器人控制代码。使用Keil MDK进行编程。
 
 1. ```项目机器人展示视频链接1：``` https://www.bilibili.com/video/BV1Gd4y1z7CA/?share_source=copy_web&vd_source=97170e52311d304767c925aed213e556
 2. ```项目机器人展示视频链接2：``` https://www.bilibili.com/video/BV1dp4y13755/?share_source=copy_web&vd_source=97170e52311d304767c925aed213e556
